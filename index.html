@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #d35400;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      width: 220px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h2 {
+      color: #e67e22;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: white;
+      background: #e67e22;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .card a:hover {
+      background: #ca6f1e;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Simple fade animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Foodie's Paradise 🍴</h1>
+  <p>Discover delicious cuisines at our partner restaurants</p>
+
+  <div class="links">
+    <div class="card fade-in">
+      <h2>Spice Villa</h2>
+      <a href="https://www.spicevilla.com" target="_blank">Visit</a>
+    </div>
+
+    <div class="card fade-in">
+      <h2>Urban Grill</h2>
+      <a href="https://www.urbangrill.com" target="_blank">Visit</a>
+    </div>
+
+    <div class="card fade-in">
+      <h2>Green Leaf Café</h2>
+      <a href="https://www.greenleafcafe.com" target="_blank">Visit</a>
+    </div>
+
+    <div class="card fade-in">
+      <h2>Royal Treat</h2>
+      <a href="https://www.royaltreat.com" target="_blank">Visit</a>
+    </div>
+  </div>
+
+  <footer>© 2025 Restaurant Hub. All rights reserved.</footer>
+
+  <script>
+    // Add staggered animation delay
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.2}s`;
+    });
+  </script>
+</body>
+</html>
